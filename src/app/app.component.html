@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <h1>To Do List for {{month}}/{{day}}/{{year}}</h1>
 <ul>
-  <li *ngFor="let currentTask of tasks">{{currentTask.description}}</li>
+  <li [class]="priorityColor(currentTask)" *ngFor="let currentTask of tasks">{{currentTask.description}}<button (click)="editTask()">Edit!</button></li>
 </ul>
 <h3>{{currentFocus}}</h3>
